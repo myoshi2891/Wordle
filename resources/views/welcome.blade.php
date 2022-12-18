@@ -7,12 +7,12 @@
 
     <title>TryCat</title>
     <link rel="stylesheet" href="/css/app.css" />
-    <script src="/js/app.js"></script>
+    <script src="/js/app.js" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 <body>
     <div id="game">
-        <div class="row">
+        {{-- <div class="row">
             <div class="tile"></div>
             <div class="tile"></div>
             <div class="tile"></div>
@@ -26,7 +26,7 @@
             <div class="tile"></div>
             <div class="tile"></div>
             <div class="tile"></div>
-        </div>
+        </div> --}}
     </div>
 </body>
 </head>

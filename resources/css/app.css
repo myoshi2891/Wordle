@@ -12,8 +12,10 @@ body {
 }
 
 #game {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+}
+
+.row {
+    display: flex;
 }
 
 .tile {
