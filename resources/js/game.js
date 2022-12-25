@@ -1,4 +1,5 @@
 import Tile from "./Tile";
+import words from "./words";
 
 export default
     {
@@ -6,6 +7,7 @@ export default
         theWord: 'cat',
         currentRowIndex: 0,
         state: 'active',
+        errors: false,
         message: '',
 
         get currentRow() {
@@ -28,6 +30,8 @@ export default
         
         onKeyPress(key) {
             this.message = '';
+            this.errors = false;
+
             if (/^[A-z]$/.test(key)) {
                 this.fillTile(key);
             } else if (key === 'Backspace') {
@@ -64,6 +68,12 @@ export default
             if (this.currentGuess.length < this.theWord.length) {
                 return;
             }     
+
+            if (!words.includes(this.currentGuess.toUpperCase())) {
+                this.errors = true;
+                
+                return this.message = 'Invalid word...';
+            }
 
             for (let tile of this.currentRow) {
                 tile.updateStatus(this.currentGuess, this.theWord);

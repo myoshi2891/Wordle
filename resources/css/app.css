@@ -88,11 +88,11 @@ h1 {
     border-radius: 4px;
 }
 
-/* .row.invalid .tile,
+.row.invalid .tile,
 .tile.invalid {
     color: var(--invalid-color);
     text-shadow: 0 0 12px rgba(246, 38, 38, 0.42);
-} */
+}
 
 .tile.correct {
     color: var(--correct-color);
