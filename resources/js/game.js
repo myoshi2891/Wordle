@@ -48,6 +48,7 @@ export default
         },
 
         emptyTile() {
+            console.log(...this.currentRow);
             for (let tile of [...this.currentRow].reverse()) {
                 if (tile.letter) {
                     tile.empty();
